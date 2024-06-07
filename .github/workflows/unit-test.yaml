@@ -33,4 +33,4 @@ jobs:
     - name: list directory_2
       continue-on-error: true
       working-directory: exercise_2
-      run: $(!!)
+      run: echo $?
