@@ -25,7 +25,12 @@ jobs:
         with:
           say-hello: "Sivaprakash"
 
-      - run: echo random-number "$RANDOM_NR"
+      - run: |
+          echo $RANDOM_NR
+          if [ $RANDOM_NR -gt 100 ]
+          then
+            echo "Im big enough"
+          fi
         shell: bash
         env:
           RANDOM_NR: ${{ steps.random.outputs.random-number }}
