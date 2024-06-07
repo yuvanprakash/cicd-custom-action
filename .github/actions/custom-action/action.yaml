@@ -9,7 +9,7 @@ runs:
   using: "composite"
   steps:
     - name: Say Hello
-      run: echo "Hello $NAME."
+      run: echo "Hello $NAME ........................ :) "
       shell: bash
       env:
         NAME: ${{ inputs.say-hello }}
