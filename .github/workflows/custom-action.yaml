@@ -21,4 +21,4 @@ jobs:
       - name: Read custom actions
         uses: ./.github/actions/custom-action
         with:
-          say-hello: 10
+          say-hello: "Sivaprakash"
