@@ -28,8 +28,6 @@ jobs:
       working-directory: exercise_2
       run: |
         pytest test_bad_code.py --junit-xml=test-results.xml
-        pwd
-        ls -a
     - name: list directory_2
       continue-on-error: true
       working-directory: exercise_2
