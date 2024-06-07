@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Printing message
-      run: echo "Running every 5 mns"
+      run: echo "Run every 5 mns"
