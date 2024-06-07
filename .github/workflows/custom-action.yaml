@@ -28,4 +28,4 @@ jobs:
       - run: echo random-number "$RANDOM_NR"
         shell: bash
         env:
-          RANDOM_NUMBER: ${{ steps.random.outputs.random-number }}
+          RANDOM_NR: ${{ steps.random.outputs.random-number }}
