@@ -27,11 +27,11 @@ jobs:
 
       - run: |
           echo $RANDOM_NR
-          if [ $RANDOM_NR -lt 100 ]
+          if [ $RANDOM_NR -gt 3500 ]
           then
             echo "Im big enough"
           else
-            echo "Small .."
+            echo "I still need to grow .."
           fi
         shell: bash
         env:
