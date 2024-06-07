@@ -1,0 +1,16 @@
+name: 'Custom actions'
+description: 'Custom action description'
+inputs:
+  say-hellO: 
+    description: 'Your name '
+    required: true
+    default: 'World'
+runs:
+  using: "composite"
+  steps:
+    - name: Say Hello
+      run: echo "Hello $NAME."
+      shell: bash
+      env:
+        INPUT_NAME: ${{ inputs.say-hellO }}
+
