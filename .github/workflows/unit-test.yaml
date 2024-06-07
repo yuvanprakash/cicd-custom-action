@@ -5,7 +5,7 @@ on:
     branches: [master]
 
 jobs:  
-  custom-action:
+  unit-testing:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
