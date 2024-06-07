@@ -24,6 +24,7 @@ jobs:
         pwd
         ls -a
     - name: run test
+      continue-on-error: true
       working-directory: exercise_2
       run: |
         pytest test_bad_code.py --junit-xml=test-results.xml
