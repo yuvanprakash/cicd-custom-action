@@ -1,7 +1,7 @@
 name: 'Custom actions'
 description: 'Custom action description'
 inputs:
-  say-hellO: 
+  say-hello: 
     description: 'Your name '
     required: true
     default: 'World'
@@ -12,4 +12,4 @@ runs:
       run: echo "Hello $NAME."
       shell: bash
       env:
-        INPUT_NAME: ${{ inputs.say-hellO }}
+        INPUT_NAME: ${{ inputs.say-hello }}
