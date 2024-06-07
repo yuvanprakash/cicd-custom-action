@@ -13,4 +13,3 @@ runs:
       shell: bash
       env:
         INPUT_NAME: ${{ inputs.say-hellO }}
-
