@@ -12,4 +12,4 @@ runs:
       run: echo "Hello $NAME."
       shell: bash
       env:
-        INPUT_NAME: ${{ inputs.say-hello }}
+        NAME: ${{ inputs.say-hello }}
