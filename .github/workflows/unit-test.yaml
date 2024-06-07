@@ -18,13 +18,18 @@ jobs:
         pip install pytest
         pip install black
         pip install flake8
+    - name: list directory_1
+      working-directory: exercise_2
+      run: |
+        pwd
+        ls -a
     - name: run test
       working-directory: exercise_2
       run: |
         pytest test_bad_code.py --junit-xml=test-results.xml
         pwd
         ls -a
-    - name: list directory
+    - name: list directory_2
       working-directory: exercise_2
       run: |
         pwd
