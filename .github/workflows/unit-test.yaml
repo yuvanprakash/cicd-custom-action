@@ -25,5 +25,6 @@ jobs:
         pytest test_bad_code.py --junit-xml=test-results.xml
       continue-on-error: true
     - name: list directory_2
+      continue-on-error: true
       if: steps.unit-test.outcome != 'success'
       run: echo "Something went wrong"
