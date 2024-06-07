@@ -26,5 +26,5 @@ jobs:
       continue-on-error: true
     - name: list directory_2
       continue-on-error: true
-      if: failure()
+      if: success()
       run: echo "Something went wrong"
