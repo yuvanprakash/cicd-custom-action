@@ -19,14 +19,11 @@ jobs:
         pip install black
         pip install flake8
     - name: run test
-      continue-on-error: true
       id: unit-test
       working-directory: exercise_2
       run: |
         pytest test_bad_code.py --junit-xml=test-results.xml
-        echo $?
-    - name: list directory_2
       continue-on-error: true
-      working-directory: exercise_2
+    - name: list directory_2
       if: steps.unit-test.exitcode > 0
       run: echo "Something went wrong"
