@@ -30,6 +30,8 @@ jobs:
           if [ $RANDOM_NR -gt 100 ]
           then
             echo "Im big enough"
+          else
+            echo "Small .."
           fi
         shell: bash
         env:
