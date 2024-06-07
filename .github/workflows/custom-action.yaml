@@ -1,7 +1,7 @@
 name: Python CI
 
 on:
-  pull_request:
+  push:
     branches: [master]
   # schedule:
   # - cron: "*/1 * * * *"
@@ -13,7 +13,7 @@ jobs:
     - name: Printing message
       run: echo "Run every 5 mns"
   
-  build:
+  custom-action:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
