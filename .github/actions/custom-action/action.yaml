@@ -5,6 +5,12 @@ inputs:
     description: 'Your name '
     required: true
     default: 'World'
+
+outputs:
+  random-number:
+    description: "Random number"
+    value: ${{ steps.random-number.outputs.random-number }}
+
 runs:
   using: "composite"
   steps:
@@ -13,3 +19,8 @@ runs:
       shell: bash
       env:
         NAME: ${{ inputs.say-hello }}
+
+    - name: Generate a random number
+      id: random-number
+      run: echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
+      shell: bash

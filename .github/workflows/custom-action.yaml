@@ -18,7 +18,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Read custom actions
+        id: random
         uses: ./.github/actions/custom-action
         with:
           say-hello: "Sivaprakash"
+
+      - run: echo random-number "$RANDOM_NR"
+        shell: bash
+        env:
+          RANDOM_NUMBER: ${{ steps.random.outputs.random-number }}
