@@ -3,8 +3,8 @@ name: Python CI
 on:
   pull_request:
     branches: [master]
-  schedule:
-  - cron: "*/1 * * * *"
+  # schedule:
+  # - cron: "*/1 * * * *"
 
 jobs:
   cron-job:
@@ -12,3 +12,13 @@ jobs:
     steps:
     - name: Printing message
       run: echo "Run every 5 mns"
+  
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Read custom actions
+        uses: ./.github/actions/custom-action
+        with:
+          say-hello: 10
