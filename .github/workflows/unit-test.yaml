@@ -20,5 +20,7 @@ jobs:
         pip install flake8
     - name: run test2
       working-directory: exercise_2
-      run: 
+      run: |
         pytest test_bad_code.py --junit-xml=test-results.xml
+        pwd
+        ls -a
